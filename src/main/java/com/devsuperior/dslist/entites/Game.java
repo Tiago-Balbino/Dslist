@@ -12,7 +12,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "game")
+@Table(name = "tb_game")
 @EqualsAndHashCode
 public class Game {
 
@@ -35,12 +35,12 @@ public class Game {
     @Column
     private Double score;
 
-    @Column
+    @Column(name = "img_url")
     private String imgUrl;
 
-    @Column
+    @Column(name = "short_description", columnDefinition = "TEXT")
     private String shortDescription;
 
-    @Column
+    @Column(name = "long_description", columnDefinition = "TEXT")
     private String longDescription;
 }
